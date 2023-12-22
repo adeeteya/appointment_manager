@@ -23,7 +23,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +36,12 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'Poppins',
             primaryColor: kPrimaryColor,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: kPrimaryColor,
+              error: kLightErrorColor,
+              brightness: Brightness.light,
+            ),
             scaffoldBackgroundColor: kOffWhite,
-            errorColor: kLightErrorColor,
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: kPrimaryColor),
             ),
@@ -53,13 +57,18 @@ class MyApp extends StatelessWidget {
           darkTheme: ThemeData(
             fontFamily: 'Poppins',
             primaryColor: Colors.grey,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: kPrimaryColor,
+              error: kDarkErrorColor,
+              brightness: Brightness.dark,
+            ),
             cardColor: kDarkColor,
             dialogBackgroundColor: kDarkColor,
-            brightness: Brightness.dark,
             scaffoldBackgroundColor: kDarkColor,
-            errorColor: kDarkErrorColor,
             elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(backgroundColor: kPrimaryColor),
+              style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: kPrimaryColor),
             ),
             floatingActionButtonTheme: const FloatingActionButtonThemeData(
               backgroundColor: kPrimaryColor,

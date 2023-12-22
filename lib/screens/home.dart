@@ -7,7 +7,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 class Home extends StatefulWidget {
   final bool isDarkMode;
-  const Home({Key? key, required this.isDarkMode}) : super(key: key);
+  const Home({super.key, required this.isDarkMode});
 
   @override
   State<Home> createState() => _HomeState();

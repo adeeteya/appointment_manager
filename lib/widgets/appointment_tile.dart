@@ -8,11 +8,10 @@ class AppointmentTile extends StatelessWidget {
   final VoidCallback onDelete;
   final VoidCallback onUpdate;
   const AppointmentTile(
-      {Key? key,
+      {super.key,
       required this.appointment,
       required this.onDelete,
-      required this.onUpdate})
-      : super(key: key);
+      required this.onUpdate});
 
   @override
   Widget build(BuildContext context) {

@@ -7,8 +7,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 class AppointmentFormScreen extends StatefulWidget {
   final int? index;
   final Appointment? appointment;
-  const AppointmentFormScreen({Key? key, this.index, this.appointment})
-      : super(key: key);
+  const AppointmentFormScreen({super.key, this.index, this.appointment});
 
   @override
   State<AppointmentFormScreen> createState() => _AppointmentFormScreenState();
